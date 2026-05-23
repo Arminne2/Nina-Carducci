@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Présentation du travail de photographe de Nina Carducci à travers son Portfolio. Ainsi que des renseignements sur son travail et son contact.">
@@ -16,20 +16,20 @@
 	<title>Nina Carducci - Photographe</title>
 </head>
 <body>
-<div class="top-header">
-	<h3 class="name">Nina Carducci</h3>
-	<div class="nav">   
+<header role="banner">
+	<h1 class="name">Nina Carducci</h1>
+	<nav class="nav" role="navigation">   
 		<ul>
 			<li><a href="#about">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt=""></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="icone d'instagram"></a></li>
 		</ul>
-	</div>
-</div>
+	</nav>
+</header>
+<main role="main">
 <div id="header">
-
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -62,8 +62,8 @@
 		<img src="./assets/images/nina.webp" alt="Portrait de Nina carducci">
 	</div>
 	<div id="about-me">
-		<h3 class="about-me__title">A propos de moi</h3>
-		<h6 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h6>
+		<h2 class="about-me__title">A propos de moi</h2>
+		<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
 		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</div>
@@ -142,19 +142,20 @@
 			<h3>Une question ? Une demande de devis ?</h3>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 			<form action="" method="post">
-				<label>Nom</label>
+				<label for="nom">Nom</label>
 				<input type="text" name="nom" id="nom">
-				<label>Email</label>
+				<label for="email">Email</label>
 				<input type="email" name="email" id="email">
-				<label>Message</label>
+				<label for="message">Message</label>
 				<textarea name="message" id="message" cols="30" rows="10"></textarea>
 				<input type="submit" value="Envoyer"/>
 			</form>
 		</div>
 		<div class="picture right">
-			<img src="./assets/images/camera.webp">
+			<img src="./assets/images/camera.webp" alt="Appareil photo">
 		</div>
 	</div>
 </div>
+</main>
 </body>
 </html>
