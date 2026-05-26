@@ -40,6 +40,7 @@ header .name {
 
 .social-link img {
 	width: 20px;
+	height: 20px;
 }
 
 #about {
@@ -50,7 +51,7 @@ header .name {
 	position: relative;
 }
 
-.picture.left::before {
+.left::before {
 	content: ' ';
 	background-color: #E5975F;
 	width: 374px;
@@ -60,7 +61,10 @@ header .name {
 	left: 0;
 	z-index: -1;
 }
-
+.left img {
+	width: 100%;
+	height: 100%;
+}
 .picture {
 	flex: 1;
 	margin: 0 20px;
@@ -198,7 +202,7 @@ header .name {
 #contact .container {
 	display: flex;
 }
-.picture.right::before {
+.right::before {
 	content: ' ';
 	background-color: #BEB45A;
 	width: 374px;
@@ -265,7 +269,7 @@ input[type="submit"] {
 	.picture {
 		width: 50%;
 	}
-	.picture.left::before {
+	.left::before {
 		width: 100%;
 		height: 30%;
 		position: absolute;
@@ -303,10 +307,10 @@ input[type="submit"] {
 	#contact .container {
 		flex-direction: column;
 	}
-	#contact .picture.right {
+	#contact .right {
 		margin-top: 1em;
 	}
-	.picture.right::before {
+	.right::before {
 		width: 100%;
 		height: 30%;
 		position: absolute;
@@ -330,7 +334,7 @@ input[type="submit"] {
 		padding-block: 1em;
 		text-align: center;
 	}
-	.picture.left::before, .picture.right::before {
+	.picture::before {
 		height: 150px;
 	}
 	#services .container {
@@ -348,6 +352,10 @@ input[type="submit"] {
 	}
 	.picture {
 		width: 80%;
+	}
+	.right img{
+		width: 100%;
+		height:100%;
 	}
 }
 
