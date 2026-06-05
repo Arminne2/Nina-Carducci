@@ -1598,6 +1598,7 @@
       Carousel.carouselInterface(carousels[i], Carousel.getInstance(carousels[i]));
     }
   });
+  
   /**
    * ------------------------------------------------------------------------
    * jQuery
@@ -1618,7 +1619,7 @@
    * Constants
    * ------------------------------------------------------------------------
    */
-
+/*
   const NAME$a = 'collapse';
   const DATA_KEY$9 = 'bs.collapse';
   const EVENT_KEY$9 = `.${DATA_KEY$9}`;
@@ -1923,7 +1924,7 @@
    * ------------------------------------------------------------------------
    * add .Collapse to jQuery only if jQuery is present
    */
-
+/*
   defineJQueryPlugin(Collapse);
 
   var top = 'top';

@@ -6,6 +6,15 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
+
+h3{
+	font-weight: 500;
+	font-size: 1.75rem;
+}
+h4{
+	font-weight: 500;
+	font-size: 1.5rem;
+}
 header{
 	background-color: white;
 	position: sticky;
@@ -20,8 +29,8 @@ header{
 
 header .name {
 	font-size: 26px;
+	font-weight: 500;
 }
-
 .nav ul {
 	display: flex;
 	list-style-type: none;
@@ -82,6 +91,7 @@ header .name {
 	margin-top: 1em;
 	margin-bottom: 60px;
 	font-size: 30px;
+	font-weight: 500;
 }
 .about-me__introduction {
 	font-family: 'Spectral';
@@ -98,6 +108,8 @@ header .name {
 .title{
 	text-align: center;
 	padding-block: 2em;
+	font-size: 2rem;
+	font-weight: 500;
 }
 .gallery .nav {
 	justify-content: center;
@@ -121,13 +133,178 @@ header .name {
 	padding-bottom: 100%;
 
 }
-.gallery-item {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	padding: .5em;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
+.modal-content{
+display : flex;
+position : absolute;
+align-items: center;
+justify-content: center;
+
+}
+
+.container {
+    overflow: hidden;
+    /* Cache les éléments qui dépassent du container */
+}
+/* Définition du carousel */
+.carousel {
+    position: relative;
+    /* Le carousel est positionné relativement à son parent */
+}
+/* Définition de l'élément contenant les diapositives */
+.carousel-inner {
+    display: flex;
+    /* Affiche les éléments en ligne */
+    overflow: hidden;
+    /* Cache les éléments qui dépassent */
+    height: 650px;
+    /* Hauteur égale à 100% de la hauteur de la vue */
+    flex-wrap: nowrap;
+    /* Empêche les éléments de se placer sur plusieurs lignes */
+}
+/* Définition des diapositives */
+.carousel-item {
+    flex: 0 0 100%;
+    /* Largeur de chaque diapositive est de 100% */
+    height: 100%;
+    /* Hauteur de chaque diapositive est de 100% */
+    transition: .5s ease-in-out;
+    /* Ajout d'une animation douce pour la transition entre les diapositives */
+}
+/* Définition de l'affichage de l'image de chaque diapositive */
+.carousel-item img {
+    width: 100%;
+    /* Largeur de l'image est de 100% */
+    height: 100%;
+    /* Hauteur de l'image est de 100% */
+	display: block;
+	object-fit: cover;
+    /* Couvre tout l'espace disponible */
+}
+/* Définition des boutons de contrôle du carousel */
+.carousel-controls {
+    position: absolute;
+    /* Les boutons sont absolument positionnés */
+    z-index: 5;
+    /* Ils sont placés au-dessus des autres éléments */
+    left: 10%;
+    /* La distance à gauche est de 10% */
+    right: 10%;
+    /* La distance à droite est de 10% */
+    top: 50%;
+    /* La distance du haut est de 50% */
+    display: flex;
+    /* Affiche les boutons en ligne */
+    justify-content: space-between;
+    /* Espacement égal entre les boutons */
+}
+/* Style des boutons de contrôle */
+.carousel-prev .carousel-next{
+    padding: 10px;
+    /* Ajout de padding pour un meilleur contrôle */
+    background-color: aquamarine;
+    /* Arrière-plan en aquamarine */
+}
+/* Définition des points de contrôle */
+.carousel-dots {
+    position: absolute;
+    /* Les points sont absolument positionnés */
+    z-index: 5;
+    /* Ils sont placés au-dessus des autres éléments */
+    left: 50%;
+    /* La distance à gauche est de 50% */
+    right: 50%;
+    /* La distance à droite est de 50% */
+    bottom: 10%;
+    /*La distance du bas est de 10% */
+    display: flex;
+    /* Affiche les points en ligne */
+    justify-content: center;
+    /* Centrage des points */
+	padding: 0;
+}
+/* Style des points de contrôle */
+.carousel-dots .dot {
+    /* Les points sont en forme de cercle */
+    margin: 3px;
+    /* Ajout d'un margin pour un meilleur contrôle */
+    cursor: pointer;
+    /* Curseur en forme de main pour un meilleur contrôle */
+	width: 30px;
+	height: 3px;
+	flex-shrink: 0;
+	padding: 0;
+
+}
+/* Styles pour les points de navigation du carrousel */
+.carousel-dots .active {
+    /* Border de 10px pour le point actif */
+    background-color: #fff;
+	border :none;
+    /* !important permet de surcharger les autres styles éventuels */
+}
+.carousel-dots .inactive {
+    /* Border de 10px pour les points inactifs */
+    background-color: rgb(255,255,255,0.6);
+	border :none;
+}
+#img01 {
+  margin: auto;
+  display: block;
+  padding: 10px;
+  background-color: white;
+}
+.arrow {
+  cursor: pointer;
+  padding: 5px;
+  background-color: white;
+}
+.filter{
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+.filter-btn {
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: #989048;
+    color: #fff;
+}
+
+.gallery {
+    display: flex;
+	justify-content: center;
+	position: relative;
+	gap: 10px;
+	flex-wrap: wrap;
+	margin: auto;
+	width: 70%;
+}
+.gallery img {
+	width: 30%;
+	height: 440px;
+	object-fit: cover;
+	padding: 0.5em;
+}
+
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
@@ -175,7 +352,7 @@ header .name {
 }
 
 #services .container {
-	justify-content: space-between;
+	justify-content: space-evenly;
 	display: flex;
 	padding : 2em 0;
 

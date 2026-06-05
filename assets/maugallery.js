@@ -61,9 +61,10 @@
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
-    $(".gallery").on("click", ".mg-next", () =>
-      $.fn.mauGallery.methods.nextImage(options.lightboxId),
-    console.log("test")
+    $(".gallery").on("click", ".mg-next", () =>{
+      $.fn.mauGallery.methods.nextImage(options.lightboxId)
+      console.log("test")
+    }
     );
   };
   $.fn.mauGallery.methods = {
