@@ -109,11 +109,11 @@ function prevImage() {
     for (let i = 1; i <= slides.length; i++) {
         let dotClass = [i];
         if (dotClass == currentSlide){
-            let dot = `<button data-slidId="${i}" class="dot active"></button>`
+            let dot = `<div data-slidId="${i}" class="dot active"></div>`
             document.querySelector('.carousel-dots').innerHTML += dot;
         }
         else if(dotClass !== currentSlide){
-            let dot = `<button data-slidId="${i}" class="dot inactive"></button>`
+            let dot = `<div data-slidId="${i}" class="dot inactive"></div>`
             document.querySelector('.carousel-dots').innerHTML += dot;
         }
         //let dotClass = i == currentSlide ? 'active' : 'inactive';
