@@ -80,10 +80,6 @@ header .name {
 	z-index: 0;
 }
 
-.picture img {
-	width: 100%;
-
-}
 #about-me {
 	flex: 2
 }
@@ -114,25 +110,7 @@ header .name {
 .gallery .nav {
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
-	color: #fff;
-	background-color: #BEB45A;
-	border-radius:0 ;
-}
-.nav-pills .nav-link {
-	color: #000
-}
-.item-column {
-	position: relative;
-	margin-bottom: 0 !important;
-	padding: 0;
-}
-.item-column::after{
-	content: "";
-	display: block;
-	padding-bottom: 100%;
 
-}
 .modal {
   display: none;
   position: fixed;
@@ -156,69 +134,41 @@ justify-content: center;
 
 .container {
     overflow: hidden;
-    /* Cache les éléments qui dépassent du container */
 }
-/* Définition du carousel */
 .carousel {
     position: relative;
-    /* Le carousel est positionné relativement à son parent */
 }
-/* Définition de l'élément contenant les diapositives */
 .carousel-inner {
     display: flex;
-    /* Affiche les éléments en ligne */
     overflow: hidden;
-    /* Cache les éléments qui dépassent */
     height: 650px;
-    /* Hauteur égale à 100% de la hauteur de la vue */
     flex-wrap: nowrap;
-    /* Empêche les éléments de se placer sur plusieurs lignes */
 }
-/* Définition des diapositives */
 .carousel-item {
     flex: 0 0 100%;
-    /* Largeur de chaque diapositive est de 100% */
     height: 100%;
-
 	width: 100%;
-    /* Hauteur de chaque diapositive est de 100% */
     transition: 0.7s ease-in-out;
-    /* Ajout d'une animation douce pour la transition entre les diapositives */
 }
-/* Définition de l'affichage de l'image de chaque diapositive */
 .carousel-item img {
     width: 100%;
-    /* Largeur de l'image est de 100% */
     height: 100%;
-    /* Hauteur de l'image est de 100% */
 	display: block;
 	object-fit: cover;
-    /* Couvre tout l'espace disponible */
 }
 
-
-/* Définition des boutons de contrôle du carousel */
 .carousel-controls {
     position: absolute;
-    /* Les boutons sont absolument positionnés */
     z-index: 5;
-    /* Ils sont placés au-dessus des autres éléments */
     left: 10%;
-    /* La distance à gauche est de 10% */
     right: 10%;
-    /* La distance à droite est de 10% */
     top: 47%;
-    /* La distance du haut est de 50% */
     display: flex;
-    /* Affiche les boutons en ligne */
     justify-content: space-between;
-    /* Espacement égal entre les boutons */
 }
-/* Style des boutons de contrôle */
 .carousel-prev .carousel-next{
    width: 40px;
    height: 40px;
-    /* Arrière-plan en aquamarine */
 }
 i{
 	color: rgba(244, 241, 243, 0.4);
@@ -226,49 +176,35 @@ i{
 i:hover{
 	color: rgba(244, 241, 243, 0.8);
 }
-/* Définition des points de contrôle */
+
 .carousel-dots {
     position: absolute;
-    /* Les points sont absolument positionnés */
     z-index: 5;
-    /* Ils sont placés au-dessus des autres éléments */
     left: 50%;
-    /* La distance à gauche est de 50% */
     right: 50%;
-    /* La distance à droite est de 50% */
     bottom: 10%;
-    /*La distance du bas est de 10% */
     display: flex;
-    /* Affiche les points en ligne */
     justify-content: center;
-    /* Centrage des points */
 	padding: 0;
 	gap: 6px;
 }
-/* Style des points de contrôle */
+
 .dot {
 	color: rgba(244, 241, 243, 0.4);
 	border : solid 2px;
 	background-color: rgba(244, 241, 243, 0.5);
-    /* Les points sont en forme de cercle */
-    /* Ajout d'un margin pour un meilleur contrôle */
     cursor: pointer;
-    /* Curseur en forme de main pour un meilleur contrôle */
 	width: 30px;
 	height: 1px;
 	flex-shrink: 0;
 	padding: 0;
 
 }
-/* Styles pour les points de navigation du carrousel */
 .carousel-dots .active {
-    /* Border de 10px pour le point actif */
     background-color: #fff;
 	border :none;
-    /* !important permet de surcharger les autres styles éventuels */
 }
 .carousel-dots .inactive {
-    /* Border de 10px pour les points inactifs */
     background-color: rgb(255,255,255,0.6);
 	border :none;
 }
@@ -297,7 +233,7 @@ i:hover{
 }
 
 .filter-btn.active {
-    background-color: #989048;
+    background-color: #575129;
     color: #fff;
 }
 
@@ -393,7 +329,10 @@ i:hover{
 	justify-content: space-between;
 	z-index: 1;
 }
+.picture img{
 
+	width: 100%;
+}
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;

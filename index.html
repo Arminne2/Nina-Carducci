@@ -5,12 +5,58 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description"
 		content="Présentation du travail de photographe de Nina Carducci à travers son Portfolio. Ainsi que des renseignements sur son travail et son contact.">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://arminne2.github.io/Nina-Carducci/" />
+	<meta property="og:title" content="Nina Carducci - Photographe" />
+	<meta property="og:description"
+		content="Découvrez mon travail de photographe ! Portrait, photo de mariage, concert" />
+	<meta name="twitter:card" content="Découvrez mon travail de photographe !" 0>
+	<meta name="twitter:title" content="Nina Carducci - Photographe">
+	<meta name="twitter:description"
+		content="Découvrez mon travail de photographe ! Portrait, photo de mariage, concert">
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
 		rel="stylesheet">
 	<meta charset="UTF-8">
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "photographie"
+  provider": {
+    "@type": "Person",
+    "name" : "Nina Carducci"
+  }
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Service photo",
+    "itemListElement": [
+	{
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Shooting photo"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Retouches"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Album photos"
+            }
+		}
+}
+}
+</script>
 	<script src="https://kit.fontawesome.com/9ae77d4e72.js" crossorigin="anonymous"></script>
 	<script src="./assets/scripts.js" defer></script>
 	<script src="./assets/slider.js" defer></script>
@@ -139,7 +185,7 @@
 			<div class="modal" id="modal1">
 				<div class="modal-content">
 					<div class="arrow gauche">❮</div>
-					<img id="img01">
+					<img id="img01" alt="image qui s'affiche dans la modale">
 					<div class="arrow droite">❯</div>
 				</div>
 			</div>
