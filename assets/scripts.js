@@ -1,5 +1,6 @@
 
-let image = document.querySelectorAll('.galleryimg');
+let image = document.querySelectorAll('.gallery-item img');
+let boxes = document.querySelectorAll('.gallery-item');
 let currentImage = 0;
 let modal = document.getElementById("modal1");
 let modalImg = document.getElementById("img01");
@@ -7,7 +8,7 @@ let next = document.querySelector(".droite");
 let previous = document.querySelector(".gauche");
 let header = document.querySelector("header");
 let filter = document.querySelectorAll(".filter-btn");
-
+let gallery = document.querySelector(".gallery");
 filter.forEach(div => {
     div.addEventListener('click', () => {
         filter.forEach(btn => btn.classList.remove('active'));
@@ -20,11 +21,11 @@ filter.forEach(div => {
 
 const filterItems = (category) => {
     console.log(category);
-    image.forEach(item => {
-        if (category === 'all' || item.getAttribute('data-gallery-tag') === category) {
-            item.style.display = 'block';
+    boxes.forEach(box => {
+        if (category === 'all' || box.getAttribute('data-gallery-tag') === category) {
+            box.style.display = 'block';
         } else {
-            item.style.display = 'none';
+            box.style.display = 'none';
         }
     });
 };
@@ -74,60 +75,3 @@ function prevImage() {
     modalImg.src = image[currentImage].src;
 }
 
-(function () {
-
-
-    const slideTimeout = 5000;
-    const prev = document.querySelector('.carousel-prev');
-    const next = document.querySelector('.carousel-next');
-    const slides = document.querySelectorAll(".carousel-item");
-
-    let dots;
-    let intervalId;
-    let currentSlide = 1;
-
-    function nextSlide(index) {
-        currentSlide = index;
-        if (currentSlide < 0){
-
-            currentSlide = 2;
-        } 
-        else if (currentSlide >= slides.length){
-            currentSlide = 0;
-        }
-        slides.forEach($elt => $elt.style.transform = `translateX(-${currentSlide * 100}%)`)
-        console.log(currentSlide);
-
-    };
-
-    function showSlide() {
-        nextSlide(currentSlide);
-        currentSlide++;
-        dots.forEach(($elt, key) => $elt.classList = `dot ${key === currentSlide? 'active': 'inactive'}`);
-    }
-
-    for (let i = 1; i <= slides.length; i++) {
-        let dotClass = [i];
-        if (dotClass == currentSlide){
-            let dot = `<div data-slidId="${i}" class="dot active"></div>`
-            document.querySelector('.carousel-dots').innerHTML += dot;
-        }
-        else if(dotClass !== currentSlide){
-            let dot = `<div data-slidId="${i}" class="dot inactive"></div>`
-            document.querySelector('.carousel-dots').innerHTML += dot;
-        }
-        //let dotClass = i == currentSlide ? 'active' : 'inactive';
-        //let dot = `<button data-slidId="${i}" class="dot ${dotClass}"></button>`;
-        
-    }
-    dots = document.querySelectorAll('.dot');
-    dots.forEach(($elt, key) => $elt.addEventListener('click', () => nextSlide(key)));
-    prev.addEventListener('click', () => {
-        nextSlide(currentSlide - 1 );
-        console.log(currentSlide);
-    });
-    next.addEventListener('click', () => {
-        nextSlide(currentSlide + 1 )
-})
-    intervalId = setInterval(showSlide, slideTimeout)
-})()

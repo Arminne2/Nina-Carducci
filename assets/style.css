@@ -179,8 +179,10 @@ justify-content: center;
     flex: 0 0 100%;
     /* Largeur de chaque diapositive est de 100% */
     height: 100%;
+
+	width: 100%;
     /* Hauteur de chaque diapositive est de 100% */
-    transition: .5s ease-in-out;
+    transition: 0.7s ease-in-out;
     /* Ajout d'une animation douce pour la transition entre les diapositives */
 }
 /* Définition de l'affichage de l'image de chaque diapositive */
@@ -193,6 +195,8 @@ justify-content: center;
 	object-fit: cover;
     /* Couvre tout l'espace disponible */
 }
+
+
 /* Définition des boutons de contrôle du carousel */
 .carousel-controls {
     position: absolute;
@@ -203,7 +207,7 @@ justify-content: center;
     /* La distance à gauche est de 10% */
     right: 10%;
     /* La distance à droite est de 10% */
-    top: 50%;
+    top: 47%;
     /* La distance du haut est de 50% */
     display: flex;
     /* Affiche les boutons en ligne */
@@ -212,10 +216,15 @@ justify-content: center;
 }
 /* Style des boutons de contrôle */
 .carousel-prev .carousel-next{
-    padding: 10px;
-    /* Ajout de padding pour un meilleur contrôle */
-    background-color: aquamarine;
+   width: 40px;
+   height: 40px;
     /* Arrière-plan en aquamarine */
+}
+i{
+	color: rgba(244, 241, 243, 0.4);
+}
+i:hover{
+	color: rgba(244, 241, 243, 0.8);
 }
 /* Définition des points de contrôle */
 .carousel-dots {
@@ -234,16 +243,19 @@ justify-content: center;
     justify-content: center;
     /* Centrage des points */
 	padding: 0;
+	gap: 6px;
 }
 /* Style des points de contrôle */
-.carousel-dots .dot {
+.dot {
+	color: rgba(244, 241, 243, 0.4);
+	border : solid 2px;
+	background-color: rgba(244, 241, 243, 0.5);
     /* Les points sont en forme de cercle */
-    margin: 3px;
     /* Ajout d'un margin pour un meilleur contrôle */
     cursor: pointer;
     /* Curseur en forme de main pour un meilleur contrôle */
 	width: 30px;
-	height: 3px;
+	height: 1px;
 	flex-shrink: 0;
 	padding: 0;
 
@@ -290,19 +302,31 @@ justify-content: center;
 }
 
 .gallery {
-    display: flex;
-	justify-content: center;
-	position: relative;
-	gap: 10px;
-	flex-wrap: wrap;
-	margin: auto;
-	width: 70%;
+   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: 25px;
+  margin-top: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
-.gallery img {
-	width: 30%;
-	height: 440px;
-	object-fit: cover;
-	padding: 0.5em;
+
+.gallery-item{
+  position: relative;
+  box-sizing: border-box;
+  max-width: 440px;
+  max-height: 440px;
+}
+.gallery-item::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+.gallery-item img {
+	position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .mg-prev, .mg-next {
