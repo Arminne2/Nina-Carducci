@@ -27,8 +27,48 @@
   "serviceType": "photographie",
   "provider": {
     "@type": "Person",
-    "name" : "Nina Carducci"
+    "name" : "Nina Carducci",
+	"telephone" : "+33 5 56 67 78 89",
+	"address" : {
+		"@type": "PostalAddress",
+		"addressLocality" : "Bordeaux, France",
+		"postalCode": "F-33200",
+		"streetAddress" : "68 avenue Alsace-Lorraine"
+	}
   },
+  "hoursAvailable": [
+
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes":  "19:00:00",
+      "dayOfWeek": "https://schema.org/Thursday",
+      "opens": "10:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "19:00:00",
+      "dayOfWeek": "https://schema.org/Tuesday",
+      "opens": "10:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "19:00:00",
+      "dayOfWeek":  "https://schema.org/Friday",
+      "opens": "10:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "19:00:00",
+      "dayOfWeek": "https://schema.org/Monday",
+      "opens": "10:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "19:00:00",
+      "dayOfWeek":  "https://schema.org/Wednesday",
+      "opens": "10:00:00"
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Service photo",
@@ -53,8 +93,7 @@
               "@type": "Service",
               "name": "Album photos"
             }
-		}]
-}
+		}]}
 }
 </script>
 	<script src="https://kit.fontawesome.com/9ae77d4e72.js" crossorigin="anonymous"></script>
