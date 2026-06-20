@@ -19,7 +19,6 @@ function createSlider() {
         dot.addEventListener("click", () => {
             let dotId = dot.dataset.dot;
             currentSlide = Number(dotId);
-            console.log(dotId);
             displaySlide();
         });
         if (index === currentSlide) {
@@ -36,7 +35,6 @@ function startInterval() {
 }
 // fonction qui affiche la bonne slide
 function displaySlide() {
-    console.log("test");
     if (currentSlide < 0) {
         currentSlide = 2;
 
